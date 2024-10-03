@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOTES</title>
-</head>
-<style>
-
+    <style>
         body {
-        background-color: lightblue;
-        margin: 0;
-        height: 100vh;
+            background-color: lightblue;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .buttoni {
             display: flex;
-            gap: 200px; /* Space between buttons */
+            flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+            gap: 20px; /* Space between buttons */
+            justify-content: center; /* Center the buttons */
+            margin-bottom: 20px; /* Space below the buttons */
         }
 
         button {
@@ -25,27 +30,38 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            flex: 1; /* Makes buttons flexible */
+            min-width: 100px; /* Minimum width for buttons */
         }
 
         .info {
             color: red;
+            text-align: center; /* Center-align the info text */
         }
-</style>
+
+        @media (max-width: 600px) {
+            button {
+                flex: 1 1 100%; /* Stack buttons vertically on small screens */
+                margin: 5px 0; /* Margin for vertical buttons */
+            }
+        }
+    </style>
+</head>
 <body>
-    <div style="text-align: center;">
+    <div>
         <img src="charusat-logo.png" width="300" height="90">
-    </div> 
-<hr>
-<div class="buttoni">
-<button type="button" onclick="window.location.href='sem1.html';">SEM 1</button>
-<button type="button" onclick="window.location.href='sem2.html';">SEM 2</button>
-<button type="button" onclick="window.location.href='sem3.html';">SEM 3</button>
-<button type="button" onclick="window.location.href='sem4.html';">SEM 4</button></div>
-</div><br> <br>
-<div class="info">
-For Projects: 
-Github  : <a href="https://github.com/tirthpatel2543">Click Here..!</a><br><br>
-IG : <a href="https://www.instagram.com/tirthh_295/">CLick Here..!</a><br> <br>
-</div>
+    </div>
+    <hr>
+    <div class="buttoni">
+        <button type="button" onclick="window.location.href='sem1.html';">SEM 1</button>
+        <button type="button" onclick="window.location.href='sem2.html';">SEM 2</button>
+        <button type="button" onclick="window.location.href='sem3.html';">SEM 3</button>
+        <button type="button" onclick="window.location.href='sem4.html';">SEM 4</button>
+    </div>
+    <div class="info">
+        For Projects: 
+        Github: <a href="https://github.com/tirthpatel2543">Click Here..!</a><br><br>
+        IG: <a href="https://www.instagram.com/tirthh_295/">Click Here..!</a><br><br>
+    </div>
 </body>
 </html>
