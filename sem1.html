@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Subject Buttons</title>
+    <style>
+        body {
+            background-color: lightblue;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+            margin-top: 20px; 
+        }
+
+        button {
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            flex: 1; 
+            min-width: 120px; 
+            max-width: 200px;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                flex: 1 1 100%;
+                margin: 5px 0; 
+            }
+
+            h1 {
+                font-size: 24px; 
+            }
+        }
+    </style>
 </head>
 <body>
-    Yo sup Charusat familyyyyyyyy
+    <h1>Select a Subject | Semester 1 </h1>
+    <div class="button-container">
+        <button type="button" onclick="window.location.href='sem1/maths.html';">Maths</button>
+        <button type="button" onclick="window.location.href='sem1/ccp.html';">CCP</button>
+        <button type="button" onclick="window.location.href='sem1/beee.html';">BEEE</button>
+    </div>
 </body>
 </html>
