@@ -6,14 +6,46 @@
     <title>Subject Buttons</title>
     <style>
         body {
-            background-color: lightblue;
+            font-family: Arial, sans-serif;
             margin: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            text-align: center;
+            position: relative; /* For absolute positioning of the background */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        /* Blurred night city background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH8iaUSDzuFNQAYC4V9LGY_Tvxrbm706gUEg&s') no-repeat center center / cover; /* Replace with your image URL */
+            filter: blur(8px); /* Adjust blur level */
+            z-index: 1; /* Place it behind other content */
+        }
+
+        h1 {
+            color: #000000; /* Black text color */
+            margin-bottom: 20px;
+            font-size: 28px; /* Increase font size for better visibility */
+            position: relative; /* Ensure heading is above the background */
+            z-index: 2; /* Place it above the background */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative; /* Ensure it sits above the blurred background */
+            z-index: 2; /* Place it above the background */
         }
 
         .button-container {
@@ -35,6 +67,11 @@
             flex: 1; 
             min-width: 120px; 
             max-width: 200px;
+            transition: background-color 0.3s; /* Smooth transition for hover */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker shade on hover */
         }
 
         @media (max-width: 600px) {
@@ -50,11 +87,13 @@
     </style>
 </head>
 <body>
-    <h1>Select a Subject | Semester 1 </h1>
-    <div class="button-container">
-        <button type="button" onclick="window.location.href='sem1/maths.html';">Maths</button>
-        <button type="button" onclick="window.location.href='sem1/ccp.html';">CCP</button>
-        <button type="button" onclick="window.location.href='sem1/beee.html';">BEEE</button>
+    <div class="container">
+        <h1>Select a Subject | Semester 1</h1>
+        <div class="button-container">
+            <button type="button" onclick="window.location.href='sem1/maths.html';">Maths</button>
+            <button type="button" onclick="window.location.href='sem1/ccp.html';">CCP</button>
+            <button type="button" onclick="window.location.href='sem1/beee.html';">BEEE</button>
+        </div>
     </div>
 </body>
 </html>
