@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Subject Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+            overflow: hidden;
+        }
+
+      
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://static.vecteezy.com/system/resources/previews/012/209/137/non_2x/paper-note-frame-on-memphis-blue-background-vector.jpg') no-repeat center center / cover; 
+            filter: blur(0px); 
+            z-index: 0; 
+        }
+
+        h1 {
+            color: #000000;
+            margin-bottom: 20px;
+            font-size: 28px; 
+            position: relative;
+            z-index: 2; 
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative; 
+            z-index: 2; 
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+            margin-top: 20px; 
+        }
+
+        button {
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            flex: 1; 
+            min-width: 120px; 
+            max-width: 200px;
+            transition: background-color 0.3s; 
+        }
+
+        button:hover {
+            background-color: #45a049; 
+        }
+
+        @media (max-width: 600px) {
+            button {
+                flex: 1 1 100%;
+                margin: 5px 0; 
+            }
+
+            h1 {
+                font-size: 24px; 
+            }
+        }
+    </style>
 </head>
 <body>
-    Yo supp Charusat familyyyyyyyy
+    <div class="container">
+        <h1>Select a Subject | Semester 4</h1>
+        <div class="button-container">
+            <button type="button" onclick="window.location.href='sem1/maths.html';">Maths</button>
+            <button type="button" onclick="window.location.href='sem1/ccp.html';">CCP</button>
+            <button type="button" onclick="window.location.href='sem1/beee.html';">BEEE</button>
+        </div>
+    </div>
 </body>
 </html>
